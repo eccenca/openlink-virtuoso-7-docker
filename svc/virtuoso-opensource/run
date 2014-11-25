@@ -1,0 +1,6 @@
+#!/bin/sh
+exec 2>&1
+
+set -e
+
+exec /opt/virtuoso-opensource/bin/virtuoso-t -c /var/lib/virtuoso/db/virtuoso.ini +foreground

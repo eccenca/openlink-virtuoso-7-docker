@@ -1,0 +1,31 @@
+#!/bin/sh
+
+set -e
+
+# General settings
+ODBC_SERVER_PORT=${ODBC_SERVER_PORT:-1111}
+HTTP_SERVER_PORT=${HTTP_SERVER_PORT:-8890}
+
+set -eu
+
+CONFIG="${VIRT_DB}/virtuoso.ini"
+
+abort () {
+  echo "$@" >&2
+  exit 1
+}
+
+write_config () {
+  cp $VIRT_INI_TEMPLATE $CONFIG
+
+  # set general settings
+  sed -i -e "s&^ServerPort      = 1111&ServerPort      = ${ODBC_SERVER_PORT}&" "$CONFIG"
+  sed -i -e "s&^ServerPort      = 8890&ServerPort      = ${HTTP_SERVER_PORT}&" "$CONFIG"
+  sed -i -e "s&^DefaultHost     = localhost:8890&DefaultHost      = localhost:${HTTP_SERVER_PORT}&" "$CONFIG"
+
+}
+
+# If we don't already have a config file, bootstrap
+if [ ! -e "$CONFIG" ]; then
+  write_config
+fi
