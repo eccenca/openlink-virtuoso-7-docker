@@ -6,7 +6,7 @@
 # Installation is in /opt/virtuoso-opensource, the database files reside in /var/lib/virtuoso/db/
 ####
 
-FROM registry.docker.eccenca.com/baseimage:latest
+FROM eccenca/baseimage:1.0.0
 MAINTAINER Rene Pietzsch <rene.pietzsch@eccenca.com>
 MAINTAINER Henri Knochehauer <henri.knochenhauer@eccenca.com>
 
