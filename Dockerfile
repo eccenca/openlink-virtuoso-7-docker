@@ -26,11 +26,11 @@ RUN apt-get -y update && \
 WORKDIR /opt
 RUN git clone https://github.com/openlink/virtuoso-opensource.git virtuoso-opensource.src
 WORKDIR /opt/virtuoso-opensource.src
-RUN git checkout v7.1.0
+RUN git checkout v7.2.0.1
 # Fix for date on Ubuntu 14.04
-RUN git config user.email "docker@eccenca.com"
-RUN git config user.name "Docker"
-RUN git cherry-pick 042f1427380e3a474581f4aa1ee064f5d2da9963
+# RUN git config user.email "docker@eccenca.com"
+# RUN git config user.name "Docker"
+# RUN git cherry-pick 042f1427380e3a474581f4aa1ee064f5d2da9963
 RUN ./autogen.sh && ./configure --prefix=$VIRT_HOME && make && make install
 
 RUN mkdir -p $VIRT_DB/
