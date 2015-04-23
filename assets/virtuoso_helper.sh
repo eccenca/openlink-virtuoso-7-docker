@@ -20,7 +20,7 @@ importData () {
     return 1
   fi
 
-  /opt/virtuoso-opensource/bin/isql 1111 dba $oldPW exec="DB.DBA.TTLP_MT (file_to_string_output ('${filename}'), '', '${graph}');"
+  /opt/virtuoso-opensource/bin/isql 1111 dba $oldpassword exec="DB.DBA.TTLP_MT (file_to_string_output ('${filename}'), '', '${graph}');"
 
 }
 
