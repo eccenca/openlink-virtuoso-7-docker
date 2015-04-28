@@ -75,12 +75,12 @@ changeAdminPassword () {
 
 appHelp () {
   echo "Available options:"
-  echo " app:importData		         - import given FILENAME to requested GRAPH"
-  echo " app:backupData            - create a backup with todays timestamp in $VIRT_DB/backup"
-  echo " app:restoreData           - restore a backup with given backup-prefix (e.g. virt_backup_yymmdd-hhmm#)"
-  echo " app:changeAdminPassword   - change the admin password"
-  echo " app:help                  - Displays the help"
-  echo " [command]                 - Execute the specified linux command eg. bash."
+  echo " app:importData [DBA-PASSWD, FILENAME, GRAPH]               - import given FILENAME to requested GRAPH "
+  echo " app:backupData [DBA-PASSWD]                                - create a backup with todays timestamp in $VIRT_DB/backup"
+  echo " app:restoreData [BACKUP-PREFIX]                            - restore a backup with given backup-prefix (e.g. virt_backup_yymmdd-hhmm#)"
+  echo " app:changeAdminPassword [OLD-DBA-PASSWD, NEW-DBA-PASSWD]   - change the admin password"
+  echo " app:help                                                   - Displays the help"
+  echo " [command]                                                  - Execute the specified linux command eg. bash."
 }
 
 case "$1" in

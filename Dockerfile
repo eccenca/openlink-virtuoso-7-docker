@@ -6,7 +6,7 @@
 # Installation is in /opt/virtuoso-opensource, the database files reside in /var/lib/virtuoso/db/
 ####
 
-FROM eccenca/baseimage:1.0.0
+FROM eccenca/baseimage:1.0.1
 MAINTAINER Rene Pietzsch <rene.pietzsch@eccenca.com>
 MAINTAINER Henri Knochehauer <henri.knochenhauer@eccenca.com>
 
@@ -18,9 +18,9 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get -y update && \
  	apt-get -y upgrade && \
-    apt-get -y install dpkg-dev build-essential && \
-    apt-get -y install autoconf automake libtool flex bison git && \
-    apt-get -y install gperf gawk m4 make openssl libssl-dev 
+  apt-get -y install dpkg-dev build-essential && \
+  apt-get -y install autoconf automake libtool flex bison git && \
+  apt-get -y install gperf gawk m4 make openssl libssl-dev 
 
 # Clone virtuoso
 WORKDIR /opt
