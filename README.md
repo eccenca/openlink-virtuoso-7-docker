@@ -3,7 +3,7 @@ This repo contains a Dockerimage for Openlink-Virtuoso.
 
 ## Current Version 
 
-v7.2.0.1 - https://github.com/openlink/virtuoso-opensource/tree/v7.2.0.1
+v7.2.1 - https://github.com/openlink/virtuoso-opensource/tree/v7.2.1
 
 ## Running your Virtuoso
 
