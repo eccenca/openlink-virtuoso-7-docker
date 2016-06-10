@@ -27,6 +27,7 @@ or
 appHelp () {
   echo "Available options:"
   echo " app:importData [DBA-PASSWD, FILENAME, GRAPH]               - import given FILENAME to requested GRAPH "
+  echo " app:deleteData [DBA-PASSWD, GRAPH]                         - delete requested GRAPH"
   echo " app:backupData [DBA-PASSWD]                                - create a backup with todays timestamp in $VIRT_DB/backup"
   echo " app:restoreData [BACKUP-PREFIX]                            - restore a backup with given backup-prefix (e.g. virt_backup_yymmdd-hhmm#)"
   echo " app:changeAdminPassword [OLD-DBA-PASSWD, NEW-DBA-PASSWD]   - change the admin password"
