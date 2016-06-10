@@ -12,7 +12,7 @@ v7.2.0.1 - https://github.com/openlink/virtuoso-opensource/tree/v7.2.0.1
     docker run --name my-virtuoso \
         -p 8890:8890 -p 1111:1111 \
         -v /my/path/to/the/virtuoso/db:/var/lib/virtuoso/db \
-        -d eccenca/virtuoso
+        -d eccenca/virtuoso7
 ```
 
 ## Usage of virtuoso_helper script
