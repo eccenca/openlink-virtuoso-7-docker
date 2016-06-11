@@ -26,7 +26,7 @@ RUN apt-get -y update && \
 WORKDIR /opt
 RUN git clone https://github.com/openlink/virtuoso-opensource.git virtuoso-opensource.src
 WORKDIR /opt/virtuoso-opensource.src
-RUN git checkout v7.2.0.1
+RUN git checkout v7.2.1
 # Fix for date on Ubuntu 14.04
 # RUN git config user.email "docker@eccenca.com"
 # RUN git config user.name "Docker"
