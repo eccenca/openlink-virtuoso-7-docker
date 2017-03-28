@@ -1,7 +1,7 @@
 # Virtuoso docker
 This repo contains a Dockerimage for Openlink-Virtuoso.
 
-## Current Version 
+## Current Version
 
 v7.2.0.1 - https://github.com/openlink/virtuoso-opensource/tree/v7.2.0.1
 
@@ -18,9 +18,9 @@ v7.2.0.1 - https://github.com/openlink/virtuoso-opensource/tree/v7.2.0.1
 ## Usage of virtuoso_helper script
 
 ```bash
-to get running the helper script 
+to get running the helper script
 /$VIRT_HOME/virtuoso_helper.sh
-or 
+or
 /opt/virtuoso-opensource/virtuoso_helper.sh
 
 
